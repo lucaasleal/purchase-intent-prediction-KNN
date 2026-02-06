@@ -33,21 +33,12 @@ features.
 
 ### Features (Evidence)
 
-- Administrative (int)
-- Administrative_Duration (float)
-- Informational (int)
-- Informational_Duration (float)
-- ProductRelated (int)
-- ProductRelated_Duration (float)
-- BounceRates (float)
-- ExitRates (float)
-- PageValues (float)
-- SpecialDay (float)
+- Administrative (int) and _Duration (float)
+- Informational (int) and _Duration (float)
+- ProductRelated (int) and _Duration (float)
+- BounceRates, ExitRate, PageValues, SpecialDay (float)
 - Month (categorical, encoded as 0–11)
-- OperatingSystems (int)
-- Browser (int)
-- Region (int)
-- TrafficType (int)
+- OperatingSystems, Browser, Region, TrafficType (int)
 - VisitorType (binary: Returning / New)
 - Weekend (binary)
 
@@ -112,6 +103,9 @@ The optimal choice of `k` depends on the business objective:
 - Marketing-focused strategies may prefer higher sensitivity
 - Cost-sensitive strategies may prefer higher specificity
 
+### Confusion Matrix (K = 5)
+<img width="640" height="480" alt="confusion_matrix_k5" src="https://github.com/user-attachments/assets/97f3e5f3-94e6-447a-a0c7-502a2015aae1" />
+
 ---
 
 ## ▶️ How to Run
@@ -127,7 +121,7 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Run:
+Run (Select your K in train_model function):
 ```bash
 python src/main.py
 ```
