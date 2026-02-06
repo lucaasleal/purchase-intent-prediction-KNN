@@ -121,7 +121,7 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-Run (Select your K in train_model function):
+Run (Select your K in main function):
 ```bash
 python src/main.py
 ```
