@@ -28,6 +28,7 @@ def main():
     print(f"Incorrect: {(y_test != predictions).sum()}")
     print(f"True Positive Rate: {100 * sensitivity:.2f}%")
     print(f"True Negative Rate: {100 * specificity:.2f}%")
+    print(f"Accuracy: {100*(y_test == predictions).sum()/len(predictions):.2f}%")
 
 
 def load_data(filename):
@@ -88,7 +89,7 @@ def train_model(evidence, labels):
     Given a list of evidence lists and a list of labels, return a
     fitted k-nearest neighbor model (k=1) trained on the data.
     """
-    model = KNeighborsClassifier(n_neighbors=3)
+    model = KNeighborsClassifier(n_neighbors=5)
 
     model.fit(evidence, labels)
     return model
